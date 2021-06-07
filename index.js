@@ -50,7 +50,7 @@ app.listen(port, () => {
     console.log(`Server is running on port : ${port}`);
 })
 var publicDir = require('path').join(__dirname, '/public');
-app.use('/uploads', express.static(publicDir));
+app.use(express.static(__dirname + '/public'));
 
 // allow to read files in folder uploads
 /*var publicDir = require('path').join(__dirname,'/public');
